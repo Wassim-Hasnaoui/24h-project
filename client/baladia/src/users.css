@@ -1,0 +1,195 @@
+/* users.css */
+
+/* General page styling */
+body {
+    color: rgb(62, 60, 60);
+    background-color: rgb(62, 60, 60);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the users list */
+.users-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title styling */
+.users-container h1 {
+    text-align: center;
+    color: #4CAF50; /* Green accent */
+    margin-bottom: 20px;
+}
+
+/* List styling */
+.users-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual user item styling */
+.user-item {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Selected user item styling */
+.user-item.selected {
+    background-color: #e8f5e9;
+    border-color: #4CAF50;
+    transform: scale(1.02);
+}
+
+/* User item hover effect */
+.user-item:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* User details animation */
+.user-item div {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading within each user item */
+.user-item h2 {
+    margin: 0;
+    color: #333;
+}
+
+/* Paragraph within each user item */
+.user-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Position the add user form under the search */
+.search-form + .add-user-form {
+    margin-top: 20px;
+}
+
+/* Add user form styling */
+.add-user-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styling */
+.add-user-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Add user button styling */
+.add-user-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Add user button hover effect */
+.add-user-form button:hover {
+    background-color: #45a049;
+}
+
+/* Button to toggle the add user form visibility styling */
+.toggle-add-user-button {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #75c0f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button to toggle the add user form visibility hover effect */
+.toggle-add-user-button:hover {
+    background-color: #2f90cc;
+}
+
+/* Search box styling */
+.search-form {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-form input[type="text"] {
+    width: 100px; /* Default width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Transition for width */
+}
+
+.search-form input[type="text"]:focus {
+    width: 200px; /* Elongated width when focused */
+}
+
+.search-form button[type="reset"] {
+    background-color: transparent;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.search-form button[type="reset"]:before, .search-form button[type="reset"]:after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 1.4em;
+}
+
+.search-form button[type="reset"]:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.search-form input[type="text"]:focus + button[type="reset"] {
+    transform: rotate(-45deg) translateY(-50%);
+}
+
+.search-form input[type="text"]:focus + button[type="reset"]:after {
+    opacity: 1;
+}
